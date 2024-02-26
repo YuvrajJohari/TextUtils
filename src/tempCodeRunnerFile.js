@@ -38,23 +38,21 @@ function App() {
   }
   const router = createBrowserRouter([
     {path : "/",
-    element:<><Navbar title="TextUtils" mode ={mode} togglemode ={togglemode}/><div className='container'>
-
-    <TextForm showAlert={showAlert} Heading="Enter the text to analyze" mode ={mode}/></div></>
+    element:<><Navbar title="TextUtils" mode ={mode} togglemode ={togglemode}/><TextForm showAlert={showAlert} Heading="Enter the text to analyze" mode ={mode}/></>
     },
     {path:"/about",
-     element:<><Navbar title="TextUtils" mode ={mode} togglemode ={togglemode}/><div className='container'><About/></div></>}
+     element:<><Navbar title="TextUtils" mode ={mode} togglemode ={togglemode}/><About/></>}
   ])
   return (
     <>
     
 
-
+<Navbar title="TextUtils" mode ={mode} togglemode ={togglemode}/>
 <Alert alert={alert}/>
 
-
+<div className='container'>
 <RouterProvider router={router}/>
-
+</div>
 
 
         
